@@ -1,4 +1,3 @@
-# python
 # Python!
 
 ## Python datatypes:
