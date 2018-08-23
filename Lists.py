@@ -1,5 +1,3 @@
-Lists.py
-
 # Create the areas list and make some changes
 areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
          "bedroom", 10.75, "bathroom", 10.50]
@@ -14,3 +12,11 @@ print(areas)
 print(areas_1)
 print(areas_2)
 
+######List Comprehension#########
+#If you used to do it like this:
+new_list = []
+for i in old_list:
+    if filter(i):
+        new_list.append(expressions(i))
+#You can obtain the same thing using list comprehension:
+new_list = [expression(i) for i in old_list if filter(i)]
