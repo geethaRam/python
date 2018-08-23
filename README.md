@@ -60,4 +60,12 @@ To create another memory block with a different variable but same values of the 
 or
 `list1=list_eg[:]`
 
+### List Comprehension
+If you used to do it like this:
+new_list = []
+for i in old_list:
+        new_list.append(expressions(i))
+#You can obtain the same thing using list comprehension:
+new_list = [expression(i) for i in old_list]
+
 
