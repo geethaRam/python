@@ -68,4 +68,78 @@ for i in old_list:
 #You can obtain the same thing using list comprehension:
 new_list = [expression(i) for i in old_list]
 
+## Functions & Methods
 
+### Builtin Functions
+1.max() - Input: List, Output: one element
+2.round() - Input: number, number of digits (optional  arg, default=0)
+3.sorted () -  sorting a list
+4.len()
+5.help(function name) - documentation of the function
+6. Type casting methods : str(),int(),float(),bool()
+
+### Builtin Methods
+** In python, everything is an object. Every object has methods associated with it. Depending on the type of the object: the available methods are different **
+
+Examples of methods:
+For String : `replace(), capitalize(), index(), etc`
+For List : `index(), count(), etc`
+
+### Packages
+> Directory of python scripts
+  Each script = module
+  Specify functions, methods and types
+
+> How to install packages in local
+  Download get-pip.py
+  Terminal : `python get-pip.py`
+  pip install numpy
+
+> Importing package
+   import numpy
+   `test_array = numpy.array()`
+   
+### Numpy 
+
+Numeric Python
+ > This is alternative to Python list
+ Calculations over entire array
+ Fast operations
+ > Installing 
+ `pip install numpy`
+ 
+Numpy arrays can contain only one type. If your regular Python list has multiple types in it - str, int. When you create a numpy array from that list - then it will make all the elements in one type 
+
+Numpy can perform operations at the element-wise without having to go over the items in the list in an explicit for loop
+`array1 + array2` -  will add individual elements from the arrays
+rather the same will append both the arrays if they are regular python arrays
+
+>Type of Numpy arrays
+They are N-Dimensional array
+You can create 2D arrays in numpy like this : 
+`np.array([[1,2,3],[4,5,6],[7,8,9]])`
+You can access the elements like this : `array[0][2]` or `array[0,2]`
+You can get the dimensions of the numpy arrays by using the shape: `array.shape`
+
+> numpy can automatically convert Python List of Lists into multi-dimensional arrays
+If your 2D numpy array has a regular structure, i.e. each row and column has a fixed number of values, complicated ways of subsetting become very easy. Have a look at the code below where the elements "a" and "c" are extracted from a list of lists.
+
+# regular list of lists
+x = [["a", "b"], ["c", "d"]]
+[x[0][0], x[1][0]]
+
+# numpy
+import numpy as np
+np_x = np.array(x)
+np_x[:,0]
+For regular Python lists, this is a real pain. For 2D numpy arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The : is for slicing; in this example, it tells Python to include all rows.
+
+# Print out the 50th row of np_baseball
+print(np_baseball[49:])
+
+# Select the entire second column of np_baseball: np_weight
+np_weight = np_baseball[:,1]
+print(np_weight)
+
+# Print out height of 124th player
+print(np_baseball[123,0])
