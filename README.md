@@ -129,17 +129,16 @@ x = [["a", "b"], ["c", "d"]]
 [x[0][0], x[1][0]]`
 
 ### Accessing elements in numpy Arrays
-`import numpy as np
+```import numpy as np
 np_x = np.array(x)
-np_x[:,0]`
+np_x[:,0]```
+
 For regular Python lists, this is a real pain. For 2D numpy arrays, however, it's pretty intuitive! The indexes before the comma refer to the rows, while those after the comma refer to the columns. The : is for slicing; in this example, it tells Python to include all rows.
 
-`# Print out the 50th row of np_baseball
+```# Print out the 50th row of np_baseball
 print(np_baseball[49:])
-
 # Select the entire second column of np_baseball: np_weight
 np_weight = np_baseball[:,1]
 print(np_weight)
-
 # Print out height of 124th player
-print(np_baseball[123,0])`
+print(np_baseball[123,0])```
